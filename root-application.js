@@ -18,10 +18,7 @@ function loadCoolApp() {
   //   return require('./cool-app/cool.app.js')
   // })
 
-  return import(/* webpackChunkName: "cool-app" */'./cool-app/cool.app.js').then(p => {
-    console.log(p)
-    return p
-  })
+  return import('./cool-app/cool.app.js')
   // return import("./cool-app/cool.app.js")
 }
 

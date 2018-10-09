@@ -50,6 +50,12 @@ filename: 'main.js',
 path: path.resolve(__dirname, 'dist'),
 ```
 
+Also adjust `loadCoolApp()` to look like:
+
+```js
+return import(/* webpackChunkName: "cool-app" */'./cool-app/cool.app.js')
+```
+
 We should now see Hello Justin! In the browser if we navigate to [localhost:8080/#/cool](localhost:8080/#/cool)
 
 ## Potential errors
