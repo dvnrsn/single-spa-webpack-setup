@@ -5,11 +5,13 @@ Single-spa app based on [step-by-step guide on medium](https://medium.com/canopy
 
 Webpack v4.20
 
-## Assumptions:
+## Assumptions
 * Package.json create/update (yarn init) with defaults
 * `webpack`, `webpack-dev-server` and `webpack-cli` in devDependencies
 * Cool app setup (minus the angular code at end) [step-by-step guide on medium](https://medium.com/canopy-tax/a-step-by-step-guide-to-single-spa-abbbcb1bedc6)
+  * Note: update `declareChildApplication` to `registerApplication` in `root-application.js`
 
+## Webpack
 Let’s start with by creating a pretty basic webpack.config.js as per [webpack getting started](https://webpack.js.org/guides/getting-started/):
 
 ```js
@@ -50,7 +52,7 @@ path: path.resolve(__dirname, 'dist'),
 
 We should now see Hello Justin! In the browser if we navigate to [localhost:8080/#/cool](localhost:8080/#/cool)
 
-## Potential errors:
+## Potential errors
 
 You might have a cryptic error, something like 
 ```js
