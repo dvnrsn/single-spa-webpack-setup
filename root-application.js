@@ -18,7 +18,11 @@ function loadCoolApp() {
   //   return require('./cool-app/cool.app.js')
   // })
 
-  return import('./cool-app/cool.app.js')
+  return import('./cool-app/cool.app.js').then(p => {
+    console.log('cool app as a module: ', p)
+    return p
+  })
+  // can also be just (returns a promise)
   // return import("./cool-app/cool.app.js")
 }
 

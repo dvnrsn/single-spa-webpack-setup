@@ -10,7 +10,6 @@ export function bootstrap() {
   // return fetch('/api/users/0')
   //   .then(response => response.json())
   //   .then(json => user = json);
-  console.log('bootstrapping');
   return Promise.resolve()
 }
 
