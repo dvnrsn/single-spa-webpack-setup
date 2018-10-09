@@ -1,6 +1,7 @@
 // single-spa will import this file and call the exported lifecyle functions
 
-console.log("asdf");
+console.log("Cool App Loaded");
+
 let user = {
   name: 'Justin'
 };
@@ -21,7 +22,7 @@ export function mount() {
    */
   return Promise.resolve()
     .then(() => {
-      console.log('might');
+      console.log('Updating DOM');
       document.getElementById("cool-app").innerHTML = `
         <div>
           Hello ${user.name}!
