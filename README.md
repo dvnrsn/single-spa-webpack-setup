@@ -39,7 +39,7 @@ yarn build
 ```
 You should now have two files in the dist directory
 
-At this point, we’re going to be getting an error about “import” only being allowed in top level modules. Note that in `root-application.js` we are using said "import" inside of `loadCoolApp()` rather than at the top of the page. This is what is called a [Dynamic Import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Dynamic_Imports) and we'll need to handle it via the magic that is [Code Splitting in Webpack](https://webpack.js.org/guides/code-splitting/#dynamic-imports).
+At this point, when we run `yarn watch` we’re going to be getting an error about “import” only being allowed in top level modules. Note that in `root-application.js` we are using said "import" inside of `loadCoolApp()` rather than at the top of the page. This is what is called a [Dynamic Import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Dynamic_Imports) and we'll need to handle it via the magic that is [Code Splitting in Webpack](https://webpack.js.org/guides/code-splitting/#dynamic-imports).
 
 Let's add the following line to webpack config:
 ```diff
